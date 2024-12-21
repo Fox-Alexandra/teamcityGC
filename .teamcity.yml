@@ -1,0 +1,12 @@
+jobs:
+  Job1:
+    name: Job 1
+    steps:
+      - type: script
+        name: teste
+        script-content: |-
+          echo "Build iniciado!"
+          echo "Arquivos no repositório:"
+          ls
+          echo "Build finalizado com sucesso!"
+    runs-on: Linux-Medium
