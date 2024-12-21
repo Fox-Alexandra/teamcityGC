@@ -9,4 +9,6 @@ jobs:
           echo "Arquivos no repositório:"
           ls
           echo "Build finalizado com sucesso!"
-    runs-on: self-hosted
+    runs-on: Windows-Medium
+    files-publication:
+      - ''
