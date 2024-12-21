@@ -1,5 +1,4 @@
 version: 2021.2
-
 projects:
   - name: TeamcityGC
     id: TeamcityGC
@@ -8,23 +7,17 @@ projects:
       - id: Build_TeamcityGC
         name: Build TeamcityGC
         steps:
-          # Etapa para fazer o checkout do código
           - type: VCS
             name: Checkout Code
-
-          # Etapa para rodar comandos customizados
           - type: CommandLine
             name: Run Build Script
-            scriptContent: |
+            scriptContent: |-
               echo "Iniciando o build..."
               ls -la
               echo "Build finalizado com sucesso!"
-
         triggers:
-          # Gatilho para executar o build em mudanças no repositório
           - type: vcs
             id: TriggerOnChanges
-
 vcsRoots:
   - id: TeamcityGC_VCS
     name: TeamcityGC GitHub Repository
