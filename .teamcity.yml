@@ -9,4 +9,4 @@ jobs:
           echo "Arquivos no repositório:"
           ls
           echo "Build finalizado com sucesso!"
-    runs-on: Linux-Medium
+    runs-on: self-hosted
