@@ -1,0 +1,16 @@
+version: 2021.2
+projects:
+  - name: TeamcityGC
+    id: TeamcityGC
+    buildTypes:
+      - id: Build_TeamcityGC
+        name: Build TeamcityGC
+        triggers:
+          - type: vcs
+            id: TriggerOnChanges
+vcsRoots:
+  - id: TeamcityGC_VCS
+    name: TeamcityGC GitHub Repository
+    url: https://github.com/Fox-Alexandra/teamcityGC.git
+    branch: refs/heads/master
+    branchSpec: +:refs/heads/*
