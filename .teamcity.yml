@@ -2,9 +2,19 @@ version: 2021.2
 projects:
   - name: TeamcityGC
     id: TeamcityGC
+    description: Projeto de exemplo para configuração no TeamCity usando YAML.
     buildTypes:
       - id: Build_TeamcityGC
         name: Build TeamcityGC
+        steps:
+          - type: VCS
+            name: Checkout Code
+          - type: CommandLine
+            name: Run Build Script
+            scriptContent: |-
+              echo "Iniciando o build..."
+              ls -la
+              echo "Build finalizado com sucesso!"
         triggers:
           - type: vcs
             id: TriggerOnChanges
